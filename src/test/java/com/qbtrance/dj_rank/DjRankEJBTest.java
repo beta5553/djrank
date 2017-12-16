@@ -20,7 +20,6 @@ public class DjRankEJBTest {
 		System.out.println("Iniciando contenedor embebido EJB");
 		container = EJBContainer.createEJBContainer();
 		context = container.getContext();	
-		
 	}
 
 	@Test
