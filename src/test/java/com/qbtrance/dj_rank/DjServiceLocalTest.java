@@ -19,26 +19,30 @@ public class DjServiceLocalTest {
 	
 	@Before
 	public void inicilizarContenedor()  {
-//		System.out.println("Starting DjServiceLocal Test - Init EJBContainer");
-//		EJBContainer container = EJBContainer.createEJBContainer();
-//		
-//		try {
-//			djServiceLocal = (DjServiceLocal) container.getContext().lookup("java:global/classes/DjServiceImpl!com.qbtrance.dj_rank.service.DjServiceLocal");
-//		} catch (NamingException e) {
-//			e.printStackTrace();
-//		}
+		System.out.println("Starting DjServiceLocal Test - Init EJBContainer");
+		EJBContainer container = EJBContainer.createEJBContainer();
+		
+		try {
+			djServiceLocal = (DjServiceLocal) container.getContext().lookup("java:global/classes/DjServiceImpl!com.qbtrance.dj_rank.service.DjServiceLocal");
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@Test
 	public void test()
 	{
-//		System.out.println("Starting DjServiceLocal Test");
-//		assertTrue(djServiceLocal != null);
-//		
-//		assertEquals(3, djServiceLocal.listDjs().size());
-//		listDjs(djServiceLocal.listDjs());
-//		
-//		System.out.println("Done testing DjServiceLocal");
+		System.out.println("Starting DjServiceLocal Test");
+		assertTrue(djServiceLocal != null);
+		
+		djServiceLocal.addNewDj(new Dj(4,"Cygnus X1", "Israel", "Morales", "Psychedelic Trance", "Mexico", "www.cx1.com","cx1@qbtrance.com"));
+		
+		assertNotNull(djServiceLocal);
+		assertEquals(4, djServiceLocal.listDjs().size());
+		
+		listDjs(djServiceLocal.listDjs());
+		
+		System.out.println("Done testing DjServiceLocal - completed");
 	}
 	
 	private void listDjs(List<Dj> djList) {
@@ -46,4 +50,5 @@ public class DjServiceLocalTest {
 			System.out.println(dj);
 		}
 	}
+	
 }

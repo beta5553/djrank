@@ -10,11 +10,12 @@ import com.qbtrance.dj_rank.domain.Dj;
 @Stateless
 public class DjServiceImpl implements DjServiceRemote, DjServiceLocal {
 	
+	static List<Dj> djList = new ArrayList<>();
+	
 	@Override
-	public List<Dj> listDjs() {
-		//static list.
-		List<Dj> djList = new ArrayList<>();
-		djList.add(new Dj(1,"izzi","Israel","Morales","Psychedelic Trance","USA","www.qbtrance.com","israel@qbtrance.com"));
+	public List<Dj> listDjs()
+	{
+		djList.add(new Dj(1,"Izzy","Israel","Morales","Psychedelic Trance","USA","www.qbtrance.com","israel@qbtrance.com"));
 		djList.add(new Dj(2,"Bizzare Contact","Birrazerre","Contacto","Psychedelic Trance","Israel","www.qbtrance.com","bizzare@qbtrance.com"));
 		djList.add(new Dj(3,"Ultra Voice","Ultra","Voice","Psychedelic Trance","Israel","www.qbtrance.com","ultra@qbtrance.com"));
 		return djList;
@@ -22,33 +23,27 @@ public class DjServiceImpl implements DjServiceRemote, DjServiceLocal {
 
 	@Override
 	public Dj getDjById(int djId) {
-		// TODO Auto-generated method stub
-		return null;
+		return djList.get(djId);
 	}
 
 	@Override
 	public Dj getDjByEmail(String email) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void registerNewDj(Dj dj) {
-		// TODO Auto-generated method stub
-		
+	public void addNewDj(Dj dj) {
+		djList.add(dj);
 	}
 
 	@Override
 	public void editExistingDj(Dj dj) {
-		// TODO Auto-generated method stub
-		
+		//djList.set(djList.get(dj), dj);
 	}
 
 	@Override
 	public void deleteExisitingDJ(Dj dj) {
-		// TODO Auto-generated method stub
-		
+		djList.remove(dj);
 	}
-
 
 }
