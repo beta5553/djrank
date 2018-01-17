@@ -15,4 +15,7 @@ public interface DjRankSOAPService {
 	@WebMethod 
 	String getDjTop10();
 	
+	@WebMethod
+	public String addDj(String djName);
+	
 }
