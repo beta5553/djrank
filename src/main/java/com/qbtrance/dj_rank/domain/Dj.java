@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class Dj implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
+	
 	private int djId;
 	private String DjName; //AKA.
 	private String fName;
