@@ -21,5 +21,11 @@ public class DjRankSOAPServiceImpl implements DjRankSOAPService {
 	public String getDjTop10() {
 		return "IZZY, THROWER, MISTICKA, ACSENSION";
 	}
+
+	@Override
+	public String addDj(String djName) {
+		System.out.println("Adding new DJ to the Database");
+		return "New DJ added: "+djName;
+	}
 	
 }
