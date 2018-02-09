@@ -34,14 +34,10 @@ public class DjServiceLocalTest {
 	{
 		System.out.println("Starting DjServiceLocal Test");
 		assertTrue(djServiceLocal != null);
-		
-		djServiceLocal.addNewDj(new Dj(4,"Cygnus X1", "Israel", "Morales", "Psychedelic Trance", "Mexico", "www.cx1.com","cx1@qbtrance.com"));
-		
+		djServiceLocal.addNewDj(new Dj(4,"Cygnus X1", "Israel", "Morales", "Mexico", "www.cx1.com","cx1@qbtrance.com"));
 		assertNotNull(djServiceLocal);
 		assertEquals(4, djServiceLocal.listDjs().size());
-		
 		listDjs(djServiceLocal.listDjs());
-		
 		System.out.println("Done testing DjServiceLocal - completed");
 	}
 	

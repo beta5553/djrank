@@ -15,9 +15,9 @@ public class DjServiceImpl implements DjServiceRemote, DjServiceLocal {
 	@Override
 	public List<Dj> listDjs()
 	{
-		djList.add(new Dj(1,"Izzy","Israel","Morales","Psychedelic Trance","USA","www.qbtrance.com","israel@qbtrance.com"));
-		djList.add(new Dj(2,"Bizzare Contact","Birrazerre","Contacto","Psychedelic Trance","Israel","www.qbtrance.com","bizzare@qbtrance.com"));
-		djList.add(new Dj(3,"Ultra Voice","Ultra","Voice","Psychedelic Trance","Israel","www.qbtrance.com","ultra@qbtrance.com"));
+		djList.add(new Dj(1,"Izzy","Israel","Morales","USA","www.qbtrance.com","israel@qbtrance.com"));
+		djList.add(new Dj(2,"Bizzare Contact","Birrazerre","Contacto","Israel","www.qbtrance.com","bizzare@qbtrance.com"));
+		djList.add(new Dj(3,"Ultra Voice","Ultra","Voice","Israel","www.qbtrance.com","ultra@qbtrance.com"));
 		return djList;
 	}
 

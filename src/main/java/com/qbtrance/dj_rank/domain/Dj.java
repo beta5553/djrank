@@ -7,22 +7,19 @@ public class Dj implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private int djId;
-	private String DjName; //AKA.
 	private String fName;
 	private String lName;
-	private String genre; 
-	private String country;
+	private String djName; //AKA.
 	private String website;
 	private String email;
+	private String country;
 	
-	public Dj(int djId, String djName, String fName, String lName, String genre, String country, String website, String email) 
-	{
+	public Dj(int djId, String djName, String fName, String lName, String country, String website, String email) {
 		super();
 		this.djId = djId;
-		DjName = djName;
+		this.djName = djName;
 		this.fName = fName;
 		this.lName = lName;
-		this.genre = genre;
 		this.country = country;
 		this.website = website;
 		this.email = email;
@@ -35,10 +32,10 @@ public class Dj implements Serializable {
 		this.djId = djId;
 	}
 	public String getDjName() {
-		return DjName;
+		return djName;
 	}
 	public void setDjName(String djName) {
-		DjName = djName;
+		this.djName = djName;
 	}
 	public String getfName() {
 		return fName;
@@ -51,12 +48,6 @@ public class Dj implements Serializable {
 	}
 	public void setlName(String lName) {
 		this.lName = lName;
-	}
-	public String getGenre() {
-		return genre;
-	}
-	public void setGenre(String genre) {
-		this.genre = genre;
 	}
 	public String getCountry() {
 		return country;
@@ -79,8 +70,7 @@ public class Dj implements Serializable {
 	
 	@Override
 	public String toString() {
-		return "Dj [djId=" + djId + ", DjName=" + DjName + ", fName=" + fName + ", lName=" + lName + ", genre=" + genre
-				+ ", country=" + country + ", website=" + website + "]";
+		return "Dj [djId=" + djId + ", DjName=" + djName + ", fName=" + fName + ", lName=" + lName + ", country=" + country + ", website=" + website + "]";
 	}
 	
 }
